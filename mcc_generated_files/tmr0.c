@@ -50,8 +50,8 @@
 
 #include <xc.h>
 #include "tmr0.h"
-
-
+#include "pin_manager.h"
+#include "cwg1.h"
 /**
   Section: TMR0 APIs
 */
@@ -62,11 +62,11 @@ void TMR0_Initialize(void)
 {
     // Set TMR0 to the options selected in the User Interface
 
-    // T0CS SOSC; T0CKPS 1:64; T0ASYNC synchronised; 
-    T0CON1 = 0xC6;
+    // T0CS FOSC/4; T0CKPS 1:32768; T0ASYNC not_synchronised; 
+    T0CON1 = 0x5F;
 
-    // TMR0H 153; 
-    TMR0H = 0x99;
+    // TMR0H 243; 
+    TMR0H = 0xF3;
 
     // TMR0L 0; 
     TMR0L = 0x00;
@@ -80,8 +80,8 @@ void TMR0_Initialize(void)
     // Set Default Interrupt Handler
     TMR0_SetInterruptHandler(TMR0_DefaultInterruptHandler);
 
-    // T0OUTPS 1:10; T0EN enabled; T016BIT 8-bit; 
-    T0CON0 = 0x89;
+    // T0OUTPS 1:1; T0EN enabled; T016BIT 8-bit; 
+    T0CON0 = 0x80;
 }
 
 void TMR0_StartTimer(void)
@@ -122,14 +122,22 @@ void TMR0_ISR(void)
 {
     // clear the TMR0 interrupt flag
     PIR0bits.TMR0IF = 0;
-    if(TMR0_InterruptHandler)
-    {
-        TMR0_InterruptHandler();
-    }
+    // ticker function call;
+    // ticker is 1 -> Callback function gets called every time this ISR executes
+    TMR0_CallBack();
 
     // add your TMR0 interrupt custom code
 }
 
+void TMR0_CallBack(void)
+{
+    // Add your custom callback code here
+
+    if(TMR0_InterruptHandler)
+    {
+        TMR0_InterruptHandler();
+    }
+}
 
 void TMR0_SetInterruptHandler(void (* InterruptHandler)(void)){
     TMR0_InterruptHandler = InterruptHandler;
@@ -138,6 +146,9 @@ void TMR0_SetInterruptHandler(void (* InterruptHandler)(void)){
 void TMR0_DefaultInterruptHandler(void){
     // add your TMR0 interrupt custom code
     // or set custom function using TMR0_SetInterruptHandler()
+    TMR0_StopTimer();
+    LED_Toggle();
+    CWG1_AutoShutdownEventSet();
 }
 
 /**

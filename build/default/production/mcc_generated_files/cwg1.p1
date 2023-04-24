@@ -26,7 +26,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17508
 [; ;C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h: 17508: extern volatile unsigned char CWG1CON0 __attribute__((address(0x610)));
 [v _CWG1CON0 `Vuc ~T0 @X0 0 e@1552 ]
-"17514
+"252 mcc_generated_files/cwg1.h
+[; ;mcc_generated_files/cwg1.h: 252: void CWG1_AutoShutdownEventSet();
+[v _CWG1_AutoShutdownEventSet `(v ~T0 @X0 0 e? ]
+"17514 C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h
 [; ;C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h: 17514:     struct {
 [s S821 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S821 . MODE . LD EN ]
@@ -1469,6 +1472,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "87
 [; ;mcc_generated_files/cwg1.c: 87:  CWG1CON0 = 0x82;
 [e = _CWG1CON0 -> -> 130 `i `uc ]
+"88
+[; ;mcc_generated_files/cwg1.c: 88:     CWG1_AutoShutdownEventSet();
+[e ( _CWG1_AutoShutdownEventSet ..  ]
 "89
 [; ;mcc_generated_files/cwg1.c: 89: }
 [e :UE 1511 ]

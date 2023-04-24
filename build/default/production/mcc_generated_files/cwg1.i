@@ -18106,7 +18106,7 @@ void CWG1_Initialize(void)
 
 
  CWG1CON0 = 0x82;
-
+    CWG1_AutoShutdownEventSet();
 }
 
 void CWG1_LoadRiseDeadbandCount(uint8_t dutyValue)

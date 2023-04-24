@@ -47,7 +47,7 @@
 */
 
 #include "pin_manager.h"
-
+#include "cwg1.h"
 #include "tmr0.h"
 
 
@@ -59,7 +59,7 @@ void PIN_MANAGER_Initialize(void)
     /**
     LATx registers
     */
-    LATA = 0x00;
+    LATA = 0x04;
     LATB = 0x00;
     LATC = 0x00;
 
@@ -82,7 +82,7 @@ void PIN_MANAGER_Initialize(void)
     */
     WPUB = 0x00;
     WPUA = 0x00;
-    WPUC = 0x00;
+    WPUC = 0x04;
 
     /**
     ODx registers
@@ -112,7 +112,7 @@ void PIN_MANAGER_Initialize(void)
     //interrupt on change for group IOCCF - flag
     IOCCFbits.IOCCF2 = 0;
     //interrupt on change for group IOCCN - negative
-    IOCCNbits.IOCCN2 = 1;
+    IOCCNbits.IOCCN2 = 0;
     //interrupt on change for group IOCCP - positive
     IOCCPbits.IOCCP2 = 1;
 
@@ -149,6 +149,7 @@ void IOCCF2_ISR(void) {
     // Add custom IOCCF2 code
     TMR0_StartTimer();
     LED_Toggle();
+    CWG1_AutoShutdownEventClear();
     // Call the interrupt handler for the callback registered at runtime
     if(IOCCF2_InterruptHandler)
     {

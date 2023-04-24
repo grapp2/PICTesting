@@ -85,7 +85,7 @@ void CWG1_Initialize(void)
 
 	// CWG1LD Buffer_not_loaded; CWG1EN enabled; CWG1MODE Fwd Full bridge mode; 
 	CWG1CON0 = 0x82;
-
+    CWG1_AutoShutdownEventSet();
 }
 
 void CWG1_LoadRiseDeadbandCount(uint8_t dutyValue)

@@ -18055,43 +18055,61 @@ extern __bank0 __bit __timeout;
 # 55 "mcc_generated_files/tmr0.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\stdbool.h" 1 3
 # 55 "mcc_generated_files/tmr0.h" 2
-# 100 "mcc_generated_files/tmr0.h"
+# 106 "mcc_generated_files/tmr0.h"
 void TMR0_Initialize(void);
-# 129 "mcc_generated_files/tmr0.h"
+# 135 "mcc_generated_files/tmr0.h"
 void TMR0_StartTimer(void);
-# 161 "mcc_generated_files/tmr0.h"
+# 167 "mcc_generated_files/tmr0.h"
 void TMR0_StopTimer(void);
-# 196 "mcc_generated_files/tmr0.h"
+# 202 "mcc_generated_files/tmr0.h"
 uint8_t TMR0_ReadTimer(void);
-# 235 "mcc_generated_files/tmr0.h"
+# 241 "mcc_generated_files/tmr0.h"
 void TMR0_WriteTimer(uint8_t timerVal);
-# 272 "mcc_generated_files/tmr0.h"
+# 278 "mcc_generated_files/tmr0.h"
 void TMR0_Reload(uint8_t periodVal);
-# 291 "mcc_generated_files/tmr0.h"
+# 297 "mcc_generated_files/tmr0.h"
 void TMR0_ISR(void);
-# 310 "mcc_generated_files/tmr0.h"
+# 315 "mcc_generated_files/tmr0.h"
+void TMR0_CallBack(void);
+# 333 "mcc_generated_files/tmr0.h"
  void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
-# 328 "mcc_generated_files/tmr0.h"
+# 351 "mcc_generated_files/tmr0.h"
 extern void (*TMR0_InterruptHandler)(void);
-# 346 "mcc_generated_files/tmr0.h"
+# 369 "mcc_generated_files/tmr0.h"
 void TMR0_DefaultInterruptHandler(void);
 # 52 "mcc_generated_files/tmr0.c" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 166 "mcc_generated_files/pin_manager.h"
+# 186 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 178 "mcc_generated_files/pin_manager.h"
+# 198 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 191 "mcc_generated_files/pin_manager.h"
+# 211 "mcc_generated_files/pin_manager.h"
 void IOCCF2_ISR(void);
-# 214 "mcc_generated_files/pin_manager.h"
+# 234 "mcc_generated_files/pin_manager.h"
 void IOCCF2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 238 "mcc_generated_files/pin_manager.h"
+# 258 "mcc_generated_files/pin_manager.h"
 extern void (*IOCCF2_InterruptHandler)(void);
-# 262 "mcc_generated_files/pin_manager.h"
+# 282 "mcc_generated_files/pin_manager.h"
 void IOCCF2_DefaultInterruptHandler(void);
 # 53 "mcc_generated_files/tmr0.c" 2
 
+# 1 "mcc_generated_files/cwg1.h" 1
+# 94 "mcc_generated_files/cwg1.h"
+void CWG1_Initialize(void);
+# 133 "mcc_generated_files/cwg1.h"
+void CWG1_LoadRiseDeadbandCount(uint8_t dutyValue);
+# 172 "mcc_generated_files/cwg1.h"
+void CWG1_LoadFallDeadbandCount(uint8_t dutyValue);
+# 202 "mcc_generated_files/cwg1.h"
+void CWG1_LoadBufferEnable(void);
+# 225 "mcc_generated_files/cwg1.h"
+_Bool CWG1_IsModuleEnabled(void);
+# 252 "mcc_generated_files/cwg1.h"
+void CWG1_AutoShutdownEventSet();
+# 289 "mcc_generated_files/cwg1.h"
+void CWG1_AutoShutdownEventClear();
+# 54 "mcc_generated_files/tmr0.c" 2
 
 
 
@@ -18104,10 +18122,10 @@ void TMR0_Initialize(void)
 
 
 
-    T0CON1 = 0xC6;
+    T0CON1 = 0x5F;
 
 
-    TMR0H = 0x99;
+    TMR0H = 0xF3;
 
 
     TMR0L = 0x00;
@@ -18122,7 +18140,7 @@ void TMR0_Initialize(void)
     TMR0_SetInterruptHandler(TMR0_DefaultInterruptHandler);
 
 
-    T0CON0 = 0x89;
+    T0CON0 = 0x80;
 }
 
 void TMR0_StartTimer(void)
@@ -18163,16 +18181,22 @@ void TMR0_ISR(void)
 {
 
     PIR0bits.TMR0IF = 0;
+
+
+    TMR0_CallBack();
+
+
+}
+
+void TMR0_CallBack(void)
+{
+
+
     if(TMR0_InterruptHandler)
     {
         TMR0_InterruptHandler();
     }
-
-
-    TMR0_StopTimer();
-    do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0);
 }
-
 
 void TMR0_SetInterruptHandler(void (* InterruptHandler)(void)){
     TMR0_InterruptHandler = InterruptHandler;
@@ -18181,4 +18205,7 @@ void TMR0_SetInterruptHandler(void (* InterruptHandler)(void)){
 void TMR0_DefaultInterruptHandler(void){
 
 
+    TMR0_StopTimer();
+    do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0);
+    CWG1_AutoShutdownEventSet();
 }

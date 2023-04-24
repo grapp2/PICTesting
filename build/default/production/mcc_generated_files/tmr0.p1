@@ -1,5 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F10859 `(v ~T0 @X0 0 tf ]
+[v F10869 `(v ~T0 @X0 0 tf ]
 "17014 C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h
 [; ;C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h: 17014: extern volatile unsigned char T0CON1 __attribute__((address(0x59F)));
 [v _T0CON1 `Vuc ~T0 @X0 0 e@1439 ]
@@ -31,12 +31,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19178
 [; ;C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h: 19178: extern volatile PIE0bits_t PIE0bits __attribute__((address(0x716)));
 [v _PIE0bits `VS896 ~T0 @X0 0 e@1814 ]
-[v F10842 `(v ~T0 @X0 0 tf ]
-"310 mcc_generated_files/tmr0.h
-[; ;mcc_generated_files/tmr0.h: 310:  void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F10842 ]
-"346
-[; ;mcc_generated_files/tmr0.h: 346: void TMR0_DefaultInterruptHandler(void);
+[v F10843 `(v ~T0 @X0 0 tf ]
+"333 mcc_generated_files/tmr0.h
+[; ;mcc_generated_files/tmr0.h: 333:  void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
+[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F10843 ]
+"369
+[; ;mcc_generated_files/tmr0.h: 369: void TMR0_DefaultInterruptHandler(void);
 [v _TMR0_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
 "16916 C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h
 [; ;C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h: 16916: extern volatile unsigned char T0CON0 __attribute__((address(0x59E)));
@@ -60,8 +60,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16944
 [; ;C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h: 16944: extern volatile T0CON0bits_t T0CON0bits __attribute__((address(0x59E)));
 [v _T0CON0bits `VS789 ~T0 @X0 0 e@1438 ]
-[v F10871 `(v ~T0 @X0 0 tf ]
-"754
+"315 mcc_generated_files/tmr0.h
+[; ;mcc_generated_files/tmr0.h: 315: void TMR0_CallBack(void);
+[v _TMR0_CallBack `(v ~T0 @X0 0 ef ]
+[v F10882 `(v ~T0 @X0 0 tf ]
+[v F10884 `(v ~T0 @X0 0 tf ]
+[v F10886 `(v ~T0 @X0 0 tf ]
+"754 C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h
 [; ;C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h: 754:     struct {
 [s S45 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S45 . LATA0 LATA1 LATA2 . LATA4 LATA5 ]
@@ -72,8 +77,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "763
 [; ;C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h: 763: extern volatile LATAbits_t LATAbits __attribute__((address(0x018)));
 [v _LATAbits `VS44 ~T0 @X0 0 e@24 ]
-[v F10873 `(v ~T0 @X0 0 tf ]
-[v F10875 `(v ~T0 @X0 0 tf ]
+"252 mcc_generated_files/cwg1.h
+[; ;mcc_generated_files/cwg1.h: 252: void CWG1_AutoShutdownEventSet();
+[v _CWG1_AutoShutdownEventSet `(v ~T0 @X0 0 e? ]
 "110 C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h
 [; ;C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1438,7 +1444,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSH equ 01FEFh ;# ">
 "59 mcc_generated_files/tmr0.c
 [; ;mcc_generated_files/tmr0.c: 59: void (*TMR0_InterruptHandler)(void);
-[v _TMR0_InterruptHandler `*F10859 ~T0 @X0 1 e ]
+[v _TMR0_InterruptHandler `*F10869 ~T0 @X0 1 e ]
 "61
 [; ;mcc_generated_files/tmr0.c: 61: void TMR0_Initialize(void)
 [v _TMR0_Initialize `(v ~T0 @X0 1 ef ]
@@ -1448,11 +1454,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _TMR0_Initialize ]
 [f ]
 "66
-[; ;mcc_generated_files/tmr0.c: 66:     T0CON1 = 0xC6;
-[e = _T0CON1 -> -> 198 `i `uc ]
+[; ;mcc_generated_files/tmr0.c: 66:     T0CON1 = 0x5F;
+[e = _T0CON1 -> -> 95 `i `uc ]
 "69
-[; ;mcc_generated_files/tmr0.c: 69:     TMR0H = 0x99;
-[e = _TMR0H -> -> 153 `i `uc ]
+[; ;mcc_generated_files/tmr0.c: 69:     TMR0H = 0xF3;
+[e = _TMR0H -> -> 243 `i `uc ]
 "72
 [; ;mcc_generated_files/tmr0.c: 72:     TMR0L = 0x00;
 [e = _TMR0L -> -> 0 `i `uc ]
@@ -1466,8 +1472,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr0.c: 81:     TMR0_SetInterruptHandler(TMR0_DefaultInterruptHandler);
 [e ( _TMR0_SetInterruptHandler (1 &U _TMR0_DefaultInterruptHandler ]
 "84
-[; ;mcc_generated_files/tmr0.c: 84:     T0CON0 = 0x89;
-[e = _T0CON0 -> -> 137 `i `uc ]
+[; ;mcc_generated_files/tmr0.c: 84:     T0CON0 = 0x80;
+[e = _T0CON0 -> -> 128 `i `uc ]
 "85
 [; ;mcc_generated_files/tmr0.c: 85: }
 [e :UE 1511 ]
@@ -1575,54 +1581,72 @@ Version 4.0 HI-TECH Software Intermediate Code
 "124
 [; ;mcc_generated_files/tmr0.c: 124:     PIR0bits.TMR0IF = 0;
 [e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
-"125
-[; ;mcc_generated_files/tmr0.c: 125:     if(TMR0_InterruptHandler)
-[e $ ! != _TMR0_InterruptHandler -> -> 0 `i `*F10871 1518  ]
-"126
-[; ;mcc_generated_files/tmr0.c: 126:     {
-{
 "127
-[; ;mcc_generated_files/tmr0.c: 127:         TMR0_InterruptHandler();
-[e ( *U _TMR0_InterruptHandler ..  ]
-"128
-[; ;mcc_generated_files/tmr0.c: 128:     }
-}
-[e :U 1518 ]
-"131
-[; ;mcc_generated_files/tmr0.c: 131:     TMR0_StopTimer();
-[e ( _TMR0_StopTimer ..  ]
-"132
-[; ;mcc_generated_files/tmr0.c: 132:     do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0);
-[e :U 1521 ]
-{
-[e = . . _LATAbits 0 2 -> ~ -> . . _LATAbits 0 2 `i `uc ]
-}
-[e :U 1520 ]
-"133
-[; ;mcc_generated_files/tmr0.c: 133: }
+[; ;mcc_generated_files/tmr0.c: 127:     TMR0_CallBack();
+[e ( _TMR0_CallBack ..  ]
+"130
+[; ;mcc_generated_files/tmr0.c: 130: }
 [e :UE 1517 ]
 }
+"132
+[; ;mcc_generated_files/tmr0.c: 132: void TMR0_CallBack(void)
+[v _TMR0_CallBack `(v ~T0 @X0 1 ef ]
+"133
+[; ;mcc_generated_files/tmr0.c: 133: {
+{
+[e :U _TMR0_CallBack ]
+[f ]
 "136
-[; ;mcc_generated_files/tmr0.c: 136: void TMR0_SetInterruptHandler(void (* InterruptHandler)(void)){
-[v _TMR0_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F10873 ]
+[; ;mcc_generated_files/tmr0.c: 136:     if(TMR0_InterruptHandler)
+[e $ ! != _TMR0_InterruptHandler -> -> 0 `i `*F10882 1519  ]
+"137
+[; ;mcc_generated_files/tmr0.c: 137:     {
+{
+"138
+[; ;mcc_generated_files/tmr0.c: 138:         TMR0_InterruptHandler();
+[e ( *U _TMR0_InterruptHandler ..  ]
+"139
+[; ;mcc_generated_files/tmr0.c: 139:     }
+}
+[e :U 1519 ]
+"140
+[; ;mcc_generated_files/tmr0.c: 140: }
+[e :UE 1518 ]
+}
+"142
+[; ;mcc_generated_files/tmr0.c: 142: void TMR0_SetInterruptHandler(void (* InterruptHandler)(void)){
+[v _TMR0_SetInterruptHandler `(v ~T0 @X0 1 ef1`*F10884 ]
 {
 [e :U _TMR0_SetInterruptHandler ]
-[v _InterruptHandler `*F10875 ~T0 @X0 1 r1 ]
+[v _InterruptHandler `*F10886 ~T0 @X0 1 r1 ]
 [f ]
-"137
-[; ;mcc_generated_files/tmr0.c: 137:     TMR0_InterruptHandler = InterruptHandler;
+"143
+[; ;mcc_generated_files/tmr0.c: 143:     TMR0_InterruptHandler = InterruptHandler;
 [e = _TMR0_InterruptHandler _InterruptHandler ]
-"138
-[; ;mcc_generated_files/tmr0.c: 138: }
-[e :UE 1522 ]
+"144
+[; ;mcc_generated_files/tmr0.c: 144: }
+[e :UE 1520 ]
 }
-"140
-[; ;mcc_generated_files/tmr0.c: 140: void TMR0_DefaultInterruptHandler(void){
+"146
+[; ;mcc_generated_files/tmr0.c: 146: void TMR0_DefaultInterruptHandler(void){
 [v _TMR0_DefaultInterruptHandler `(v ~T0 @X0 1 ef ]
 {
 [e :U _TMR0_DefaultInterruptHandler ]
 [f ]
-"143
-[; ;mcc_generated_files/tmr0.c: 143: }
-[e :UE 1523 ]
+"149
+[; ;mcc_generated_files/tmr0.c: 149:     TMR0_StopTimer();
+[e ( _TMR0_StopTimer ..  ]
+"150
+[; ;mcc_generated_files/tmr0.c: 150:     do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0);
+[e :U 1524 ]
+{
+[e = . . _LATAbits 0 2 -> ~ -> . . _LATAbits 0 2 `i `uc ]
+}
+[e :U 1523 ]
+"151
+[; ;mcc_generated_files/tmr0.c: 151:     CWG1_AutoShutdownEventSet();
+[e ( _CWG1_AutoShutdownEventSet ..  ]
+"152
+[; ;mcc_generated_files/tmr0.c: 152: }
+[e :UE 1521 ]
 }

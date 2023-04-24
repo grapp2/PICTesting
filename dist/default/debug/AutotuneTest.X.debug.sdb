@@ -3,6 +3,24 @@
 [d edition pro ]
 [d chip 16F18446 ]
 [d frameptr 6 ]
+"185 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/tmr1.c
+[e E10851 . `uc
+channel_ANA4 4
+channel_Vss 59
+channel_Temp_Sensor 60
+channel_DAC1_Output 61
+channel_FVR_Buffer1 62
+channel_FVR_Buffer2 63
+]
+"114 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/adcc.c
+[e E10834 . `uc
+channel_ANA4 4
+channel_Vss 59
+channel_Temp_Sensor 60
+channel_DAC1_Output 61
+channel_FVR_Buffer1 62
+channel_FVR_Buffer2 63
+]
 "10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul8_16.c
@@ -13,15 +31,28 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "49 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\main.c
 [v _main main `(v  1 e 1 0 ]
+"63 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/adcc.c
+[v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
+"114
+[v _ADCC_StartConversion ADCC_StartConversion `(v  1 e 1 0 ]
+"126
+[v _ADCC_IsConversionDone ADCC_IsConversionDone `(a  1 e 1 0 ]
+"132
+[v _ADCC_GetConversionResult ADCC_GetConversionResult `(us  1 e 2 0 ]
 "58 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/cwg1.c
 [v _CWG1_Initialize CWG1_Initialize `(v  1 e 1 0 ]
+"111
+[v _CWG1_AutoShutdownEventSet CWG1_AutoShutdownEventSet `(v  1 e 1 0 ]
+[v i1_CWG1_AutoShutdownEventSet CWG1_AutoShutdownEventSet `(v  1 e 1 0 ]
+"116
+[v _CWG1_AutoShutdownEventClear CWG1_AutoShutdownEventClear `(v  1 e 1 0 ]
 "52 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 "50 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"60
+"62
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"74
+"76
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 "58 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/nco1.c
 [v _NCO1_Initialize NCO1_Initialize `(v  1 e 1 0 ]
@@ -31,28 +62,42 @@
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 "147
 [v _IOCCF2_ISR IOCCF2_ISR `(v  1 e 1 0 ]
-"163
+"164
 [v _IOCCF2_SetInterruptHandler IOCCF2_SetInterruptHandler `(v  1 e 1 0 ]
-"170
+"171
 [v _IOCCF2_DefaultInterruptHandler IOCCF2_DefaultInterruptHandler `(v  1 e 1 0 ]
 "61 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 "87
 [v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
+"93
+[v _TMR0_StopTimer TMR0_StopTimer `(v  1 e 1 0 ]
 "121
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
-"134
+"132
+[v _TMR0_CallBack TMR0_CallBack `(v  1 e 1 0 ]
+"142
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
-"138
+"146
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
-[s S556 . 1 `uc 1 INTEDG 1 0 :1:0 
+"65 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"128
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+"165
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+"178
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+"182
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
+[s S56 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "426 C:/Users/rapps/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.17.343/xc8\pic\include\proc\pic16f18446.h
-[u S561 . 1 `S556 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES561  1 e 1 @11 ]
+[u S61 . 1 `S56 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES61  1 e 1 @11 ]
 "597
 [v _TRISA TRISA `VEuc  1 e 1 @18 ]
 "647
@@ -61,7 +106,7 @@
 [v _TRISC TRISC `VEuc  1 e 1 @20 ]
 "748
 [v _LATA LATA `VEuc  1 e 1 @24 ]
-[s S398 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S477 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -69,12 +114,275 @@
 `uc 1 LATA5 1 0 :1:5 
 ]
 "763
-[u S405 . 1 `S398 1 . 1 0 ]
-[v _LATAbits LATAbits `VES405  1 e 1 @24 ]
+[u S484 . 1 `S477 1 . 1 0 ]
+[v _LATAbits LATAbits `VES484  1 e 1 @24 ]
 "793
 [v _LATB LATB `VEuc  1 e 1 @25 ]
 "832
 [v _LATC LATC `VEuc  1 e 1 @26 ]
+"901
+[v _ADLTHL ADLTHL `VEuc  1 e 1 @140 ]
+"1029
+[v _ADLTHH ADLTHH `VEuc  1 e 1 @141 ]
+"1164
+[v _ADUTHL ADUTHL `VEuc  1 e 1 @142 ]
+"1292
+[v _ADUTHH ADUTHH `VEuc  1 e 1 @143 ]
+"1427
+[v _ADERRL ADERRL `VEuc  1 e 1 @144 ]
+"1555
+[v _ADERRH ADERRH `VEuc  1 e 1 @145 ]
+"1690
+[v _ADSTPTL ADSTPTL `VEuc  1 e 1 @146 ]
+"1818
+[v _ADSTPTH ADSTPTH `VEuc  1 e 1 @147 ]
+"1953
+[v _ADFLTRL ADFLTRL `VEuc  1 e 1 @148 ]
+"2081
+[v _ADFLTRH ADFLTRH `VEuc  1 e 1 @149 ]
+"2218
+[v _ADACCL ADACCL `VEuc  1 e 1 @150 ]
+"2346
+[v _ADACCH ADACCH `VEuc  1 e 1 @151 ]
+"2474
+[v _ADACCU ADACCU `VEuc  1 e 1 @152 ]
+"2530
+[v _ADCNT ADCNT `VEuc  1 e 1 @153 ]
+"2658
+[v _ADRPT ADRPT `VEuc  1 e 1 @154 ]
+"2793
+[v _ADPREVL ADPREVL `VEuc  1 e 1 @155 ]
+"2921
+[v _ADPREVH ADPREVH `VEuc  1 e 1 @156 ]
+"3056
+[v _ADRESL ADRESL `VEuc  1 e 1 @157 ]
+"3184
+[v _ADRESH ADRESH `VEuc  1 e 1 @158 ]
+"3304
+[v _ADPCH ADPCH `VEuc  1 e 1 @159 ]
+"3415
+[v _ADACQL ADACQL `VEuc  1 e 1 @268 ]
+"3543
+[v _ADACQH ADACQH `VEuc  1 e 1 @269 ]
+"3635
+[v _ADCAP ADCAP `VEuc  1 e 1 @270 ]
+"3734
+[v _ADPREL ADPREL `VEuc  1 e 1 @271 ]
+"3862
+[v _ADPREH ADPREH `VEuc  1 e 1 @272 ]
+"3954
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @273 ]
+[s S893 . 1 `uc 1 GO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 FM 1 0 :2:2 
+`uc 1 CS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CONT 1 0 :1:6 
+`uc 1 ON 1 0 :1:7 
+]
+"3989
+[s S901 . 1 `uc 1 ADGO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM 1 0 :2:2 
+`uc 1 ADCS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ADCONT 1 0 :1:6 
+`uc 1 ADON 1 0 :1:7 
+]
+[s S909 . 1 `uc 1 DONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 FM0 1 0 :1:2 
+]
+[s S913 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM0 1 0 :1:2 
+]
+[u S917 . 1 `S893 1 . 1 0 `S901 1 . 1 0 `S909 1 . 1 0 `S913 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES917  1 e 1 @273 ]
+"4064
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @274 ]
+[s S1143 . 1 `uc 1 DSEN 1 0 :1:0 
+`uc 1 . 1 0 :2:1 
+`uc 1 GBOE 1 0 :1:3 
+`uc 1 GAOE 1 0 :1:4 
+`uc 1 GPOL 1 0 :1:5 
+`uc 1 IPEN 1 0 :1:6 
+`uc 1 PPOL 1 0 :1:7 
+]
+"4089
+[s S1151 . 1 `uc 1 ADDSEN 1 0 :1:0 
+`uc 1 . 1 0 :2:1 
+`uc 1 ADGBOE 1 0 :1:3 
+`uc 1 ADGAOE 1 0 :1:4 
+`uc 1 ADGPOL 1 0 :1:5 
+`uc 1 ADIPEN 1 0 :1:6 
+`uc 1 ADPPOL 1 0 :1:7 
+]
+[u S1159 . 1 `S1143 1 . 1 0 `S1151 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES1159  1 e 1 @274 ]
+"4154
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @275 ]
+[s S1004 . 1 `uc 1 MODE 1 0 :3:0 
+`uc 1 ACLR 1 0 :1:3 
+`uc 1 CRS 1 0 :3:4 
+`uc 1 PSIS 1 0 :1:7 
+]
+"4202
+[s S1009 . 1 `uc 1 ADMD0 1 0 :1:0 
+`uc 1 ADMD1 1 0 :1:1 
+`uc 1 ADMD2 1 0 :1:2 
+`uc 1 ADACLR 1 0 :1:3 
+`uc 1 ADCRS0 1 0 :1:4 
+`uc 1 ADCRS1 1 0 :1:5 
+`uc 1 ADCRS2 1 0 :1:6 
+`uc 1 ADPSIS 1 0 :1:7 
+]
+[s S1018 . 1 `uc 1 ADMD 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCRS 1 0 :3:4 
+]
+[s S1022 . 1 `uc 1 MODE0 1 0 :1:0 
+`uc 1 MODE1 1 0 :1:1 
+`uc 1 MODE2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CRS0 1 0 :1:4 
+`uc 1 CRS1 1 0 :1:5 
+`uc 1 CRS2 1 0 :1:6 
+]
+[s S1030 . 1 `uc 1 MD 1 0 :3:0 
+]
+[s S1032 . 1 `uc 1 MD0 1 0 :1:0 
+`uc 1 MD1 1 0 :1:1 
+`uc 1 MD2 1 0 :1:2 
+]
+[s S1036 . 1 `uc 1 ADMODE 1 0 :3:0 
+]
+[u S1038 . 1 `S1004 1 . 1 0 `S1009 1 . 1 0 `S1018 1 . 1 0 `S1022 1 . 1 0 `S1030 1 . 1 0 `S1032 1 . 1 0 `S1036 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES1038  1 e 1 @275 ]
+"4332
+[v _ADCON3 ADCON3 `VEuc  1 e 1 @276 ]
+[s S949 . 1 `uc 1 TMD 1 0 :3:0 
+`uc 1 SOI 1 0 :1:3 
+`uc 1 CALC 1 0 :3:4 
+]
+"4367
+[s S953 . 1 `uc 1 ADTMD0 1 0 :1:0 
+`uc 1 ADTMD1 1 0 :1:1 
+`uc 1 ADTMD2 1 0 :1:2 
+`uc 1 ADSOI 1 0 :1:3 
+`uc 1 ADCALC0 1 0 :1:4 
+`uc 1 ADCALC1 1 0 :1:5 
+`uc 1 ADCALC2 1 0 :1:6 
+]
+[s S961 . 1 `uc 1 ADTMD 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCALC 1 0 :3:4 
+]
+[s S965 . 1 `uc 1 TMD0 1 0 :1:0 
+`uc 1 TMD1 1 0 :1:1 
+`uc 1 TMD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CALC0 1 0 :1:4 
+`uc 1 CALC1 1 0 :1:5 
+`uc 1 CALC2 1 0 :1:6 
+]
+[u S973 . 1 `S949 1 . 1 0 `S953 1 . 1 0 `S961 1 . 1 0 `S965 1 . 1 0 ]
+[v _ADCON3bits ADCON3bits `VES973  1 e 1 @276 ]
+"4462
+[v _ADSTAT ADSTAT `VEuc  1 e 1 @277 ]
+[s S1083 . 1 `uc 1 STAT 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 MATH 1 0 :1:4 
+`uc 1 LTHR 1 0 :1:5 
+`uc 1 UTHR 1 0 :1:6 
+`uc 1 OV 1 0 :1:7 
+]
+"4497
+[s S1090 . 1 `uc 1 ADSTAT0 1 0 :1:0 
+`uc 1 ADSTAT1 1 0 :1:1 
+`uc 1 ADSTAT2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADMATH 1 0 :1:4 
+`uc 1 ADLTHR 1 0 :1:5 
+`uc 1 ADUTHR 1 0 :1:6 
+`uc 1 ADAOV 1 0 :1:7 
+]
+[s S1099 . 1 `uc 1 ADSTAT 1 0 :3:0 
+`uc 1 . 1 0 :4:3 
+`uc 1 ADOV 1 0 :1:7 
+]
+[s S1103 . 1 `uc 1 STAT0 1 0 :1:0 
+`uc 1 STAT1 1 0 :1:1 
+`uc 1 STAT2 1 0 :1:2 
+]
+[u S1107 . 1 `S1083 1 . 1 0 `S1090 1 . 1 0 `S1099 1 . 1 0 `S1103 1 . 1 0 ]
+[v _ADSTATbits ADSTATbits `VES1107  1 e 1 @277 ]
+"4587
+[v _ADREF ADREF `VEuc  1 e 1 @278 ]
+"4669
+[v _ADACT ADACT `VEuc  1 e 1 @279 ]
+"4761
+[v _ADCLK ADCLK `VEuc  1 e 1 @280 ]
+"7596
+[v _TMR1L TMR1L `VEuc  1 e 1 @524 ]
+"7666
+[v _TMR1H TMR1H `VEuc  1 e 1 @525 ]
+"7736
+[v _T1CON T1CON `VEuc  1 e 1 @526 ]
+[s S705 . 1 `uc 1 ON 1 0 :1:0 
+`uc 1 RD16 1 0 :1:1 
+`uc 1 NOT_SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CKPS 1 0 :2:4 
+]
+"7772
+[s S711 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 T1RD16 1 0 :1:1 
+`uc 1 NOT_T1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[s S718 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+]
+[s S722 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD161 1 0 :1:1 
+]
+[u S725 . 1 `S705 1 . 1 0 `S711 1 . 1 0 `S718 1 . 1 0 `S722 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES725  1 e 1 @526 ]
+"7926
+[v _T1GCON T1GCON `VEuc  1 e 1 @527 ]
+[s S751 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GVAL 1 0 :1:2 
+`uc 1 GGO 1 0 :1:3 
+`uc 1 GSPM 1 0 :1:4 
+`uc 1 GTM 1 0 :1:5 
+`uc 1 GPOL 1 0 :1:6 
+`uc 1 GE 1 0 :1:7 
+]
+"7964
+[s S759 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 T1GE 1 0 :1:7 
+]
+[s S767 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_DONE 1 0 :1:3 
+]
+[s S770 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_T1DONE 1 0 :1:3 
+]
+[u S773 . 1 `S751 1 . 1 0 `S759 1 . 1 0 `S767 1 . 1 0 `S770 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES773  1 e 1 @527 ]
+"8140
+[v _T1GATE T1GATE `VEuc  1 e 1 @528 ]
+"8306
+[v _T1CLK T1CLK `VEuc  1 e 1 @529 ]
 "15643
 [v _NCO1ACCL NCO1ACCL `VEuc  1 e 1 @1420 ]
 "15771
@@ -89,7 +397,7 @@
 [v _NCO1INCU NCO1INCU `VEuc  1 e 1 @1425 ]
 "16324
 [v _NCO1CON NCO1CON `VEuc  1 e 1 @1426 ]
-[s S242 . 1 `uc 1 PFM 1 0 :1:0 
+[s S321 . 1 `uc 1 PFM 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 POL 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
@@ -97,15 +405,15 @@
 `uc 1 EN 1 0 :1:7 
 ]
 "16347
-[s S249 . 1 `uc 1 NCO1PFM 1 0 :1:0 
+[s S328 . 1 `uc 1 NCO1PFM 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 NCO1POL 1 0 :1:4 
 `uc 1 NCO1OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 NCO1EN 1 0 :1:7 
 ]
-[u S256 . 1 `S242 1 . 1 0 `S249 1 . 1 0 ]
-[v _NCO1CONbits NCO1CONbits `VES256  1 e 1 @1426 ]
+[u S335 . 1 `S321 1 . 1 0 `S328 1 . 1 0 ]
+[v _NCO1CONbits NCO1CONbits `VES335  1 e 1 @1426 ]
 "16392
 [v _NCO1CLK NCO1CLK `VEuc  1 e 1 @1427 ]
 "16524
@@ -114,27 +422,27 @@
 [v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
 "16916
 [v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
-[s S491 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S572 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 MD16 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "16944
-[s S497 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S578 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T0MD16 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
-[s S503 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S584 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
 `uc 1 T016BIT 1 0 :1:4 
 ]
-[u S509 . 1 `S491 1 . 1 0 `S497 1 . 1 0 `S503 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES509  1 e 1 @1438 ]
+[u S590 . 1 `S572 1 . 1 0 `S578 1 . 1 0 `S584 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES590  1 e 1 @1438 ]
 "17014
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
 "17161
@@ -147,60 +455,60 @@
 [v _CWG1DBF CWG1DBF `VEuc  1 e 1 @1551 ]
 "17508
 [v _CWG1CON0 CWG1CON0 `VEuc  1 e 1 @1552 ]
-[s S78 . 1 `uc 1 MODE 1 0 :3:0 
+[s S149 . 1 `uc 1 MODE 1 0 :3:0 
 `uc 1 . 1 0 :3:3 
 `uc 1 LD 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "17539
-[s S83 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S154 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 G1EN 1 0 :1:7 
 ]
-[s S89 . 1 `uc 1 CWG1MODE 1 0 :3:0 
+[s S160 . 1 `uc 1 CWG1MODE 1 0 :3:0 
 `uc 1 . 1 0 :3:3 
 `uc 1 CWG1LD 1 0 :1:6 
 `uc 1 CWG1EN 1 0 :1:7 
 ]
-[s S94 . 1 `uc 1 CWG1MODE0 1 0 :1:0 
+[s S165 . 1 `uc 1 CWG1MODE0 1 0 :1:0 
 `uc 1 CWG1MODE1 1 0 :1:1 
 `uc 1 CWG1MODE2 1 0 :1:2 
 ]
-[u S98 . 1 `S78 1 . 1 0 `S83 1 . 1 0 `S89 1 . 1 0 `S94 1 . 1 0 ]
-[v _CWG1CON0bits CWG1CON0bits `VES98  1 e 1 @1552 ]
+[u S169 . 1 `S149 1 . 1 0 `S154 1 . 1 0 `S160 1 . 1 0 `S165 1 . 1 0 ]
+[v _CWG1CON0bits CWG1CON0bits `VES169  1 e 1 @1552 ]
 "17609
 [v _CWG1CON1 CWG1CON1 `VEuc  1 e 1 @1553 ]
 "17687
 [v _CWG1AS0 CWG1AS0 `VEuc  1 e 1 @1554 ]
-[s S124 . 1 `uc 1 . 1 0 :2:0 
+[s S195 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LSAC 1 0 :2:2 
 `uc 1 LSBD 1 0 :2:4 
 `uc 1 REN 1 0 :1:6 
 `uc 1 SHUTDOWN 1 0 :1:7 
 ]
 "17722
-[s S130 . 1 `uc 1 . 1 0 :2:0 
+[s S201 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 LSAC0 1 0 :1:2 
 `uc 1 LSCA1 1 0 :1:3 
 `uc 1 LSBD0 1 0 :1:4 
 `uc 1 LSBD1 1 0 :1:5 
 ]
-[s S136 . 1 `uc 1 . 1 0 :2:0 
+[s S207 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 CWG1LSAC 1 0 :2:2 
 `uc 1 CWG1LSBD 1 0 :2:4 
 `uc 1 CWG1REN 1 0 :1:6 
 `uc 1 CWG1SHUTDOWN 1 0 :1:7 
 ]
-[s S142 . 1 `uc 1 . 1 0 :2:0 
+[s S213 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 CWG1LSAC0 1 0 :1:2 
 `uc 1 CWG1LSAC1 1 0 :1:3 
 `uc 1 CWG1LSBD0 1 0 :1:4 
 `uc 1 CWG1LSBD1 1 0 :1:5 
 ]
-[u S148 . 1 `S124 1 . 1 0 `S130 1 . 1 0 `S136 1 . 1 0 `S142 1 . 1 0 ]
-[v _CWG1AS0bits CWG1AS0bits `VES148  1 e 1 @1554 ]
+[u S219 . 1 `S195 1 . 1 0 `S201 1 . 1 0 `S207 1 . 1 0 `S213 1 . 1 0 ]
+[v _CWG1AS0bits CWG1AS0bits `VES219  1 e 1 @1554 ]
 "17807
 [v _CWG1AS1 CWG1AS1 `VEuc  1 e 1 @1555 ]
 "17863
@@ -213,6 +521,16 @@
 "18807
 [u S40 . 1 `S35 1 . 1 0 ]
 [v _PIR0bits PIR0bits `VES40  1 e 1 @1804 ]
+[s S86 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 TMR3IF 1 0 :1:2 
+`uc 1 TMR4IF 1 0 :1:3 
+`uc 1 TMR5IF 1 0 :1:4 
+`uc 1 TMR6IF 1 0 :1:5 
+]
+"18964
+[u S93 . 1 `S86 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES93  1 e 1 @1808 ]
 [s S22 . 1 `uc 1 INTE 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIE 1 0 :1:4 
@@ -221,6 +539,16 @@
 "19178
 [u S27 . 1 `S22 1 . 1 0 ]
 [v _PIE0bits PIE0bits `VES27  1 e 1 @1814 ]
+[s S69 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 TMR3IE 1 0 :1:2 
+`uc 1 TMR4IE 1 0 :1:3 
+`uc 1 TMR5IE 1 0 :1:4 
+`uc 1 TMR6IE 1 0 :1:5 
+]
+"19335
+[u S76 . 1 `S69 1 . 1 0 ]
+[v _PIE4bits PIE4bits `VES76  1 e 1 @1818 ]
 "19545
 [v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
 "19590
@@ -287,7 +615,7 @@
 [v _SLRCONC SLRCONC `VEuc  1 e 1 @8017 ]
 "31393
 [v _INLVLC INLVLC `VEuc  1 e 1 @8018 ]
-[s S346 . 1 `uc 1 IOCCP0 1 0 :1:0 
+[s S425 . 1 `uc 1 IOCCP0 1 0 :1:0 
 `uc 1 IOCCP1 1 0 :1:1 
 `uc 1 IOCCP2 1 0 :1:2 
 `uc 1 IOCCP3 1 0 :1:3 
@@ -297,9 +625,9 @@
 `uc 1 IOCCP7 1 0 :1:7 
 ]
 "31472
-[u S355 . 1 `S346 1 . 1 0 ]
-[v _IOCCPbits IOCCPbits `VES355  1 e 1 @8019 ]
-[s S325 . 1 `uc 1 IOCCN0 1 0 :1:0 
+[u S434 . 1 `S425 1 . 1 0 ]
+[v _IOCCPbits IOCCPbits `VES434  1 e 1 @8019 ]
+[s S404 . 1 `uc 1 IOCCN0 1 0 :1:0 
 `uc 1 IOCCN1 1 0 :1:1 
 `uc 1 IOCCN2 1 0 :1:2 
 `uc 1 IOCCN3 1 0 :1:3 
@@ -309,9 +637,9 @@
 `uc 1 IOCCN7 1 0 :1:7 
 ]
 "31534
-[u S334 . 1 `S325 1 . 1 0 ]
-[v _IOCCNbits IOCCNbits `VES334  1 e 1 @8020 ]
-[s S304 . 1 `uc 1 IOCCF0 1 0 :1:0 
+[u S413 . 1 `S404 1 . 1 0 ]
+[v _IOCCNbits IOCCNbits `VES413  1 e 1 @8020 ]
+[s S383 . 1 `uc 1 IOCCF0 1 0 :1:0 
 `uc 1 IOCCF1 1 0 :1:1 
 `uc 1 IOCCF2 1 0 :1:2 
 `uc 1 IOCCF3 1 0 :1:3 
@@ -321,12 +649,18 @@
 `uc 1 IOCCF7 1 0 :1:7 
 ]
 "31596
-[u S313 . 1 `S304 1 . 1 0 ]
-[v _IOCCFbits IOCCFbits `VES313  1 e 1 @8021 ]
+[u S392 . 1 `S383 1 . 1 0 ]
+[v _IOCCFbits IOCCFbits `VES392  1 e 1 @8021 ]
 "54 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/pin_manager.c
 [v _IOCCF2_InterruptHandler IOCCF2_InterruptHandler `*.37(v  1 e 2 0 ]
 "59 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/tmr0.c
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
+"57 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
+"58
+[v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
+"59
+[v _value value `us  1 e 2 0 ]
 "49 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
@@ -335,39 +669,50 @@
 "50 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"58
+"60
+} 0
+"65 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"98
+} 0
+"178
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"180
 } 0
 "61 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 {
 "85
 } 0
-"134
+"142
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
-"136
+"144
 } 0
-"74 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/mcc.c
+"76 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/mcc.c
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
-"92
+"94
 } 0
 "57 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "133
 } 0
-"163
+"164
 [v _IOCCF2_SetInterruptHandler IOCCF2_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v IOCCF2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
-"165
+"166
 } 0
-"60 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/mcc.c
+"62 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"72
+"74
 } 0
 "58 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/nco1.c
 [v _NCO1_Initialize NCO1_Initialize `(v  1 e 1 0 ]
@@ -379,20 +724,80 @@
 {
 "89
 } 0
+"111
+[v _CWG1_AutoShutdownEventSet CWG1_AutoShutdownEventSet `(v  1 e 1 0 ]
+{
+"114
+} 0
+"63 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/adcc.c
+[v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
+{
+"112
+} 0
 "52 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"67
+"78
+} 0
+"165 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/tmr1.c
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+{
+"175
+} 0
+"128
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
+"148
+} 0
+"182
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"190
+} 0
+"114 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/adcc.c
+[v _ADCC_StartConversion ADCC_StartConversion `(v  1 e 1 0 ]
+{
+[v ADCC_StartConversion@channel channel `E10834  1 a 1 wreg ]
+[v ADCC_StartConversion@channel channel `E10834  1 a 1 wreg ]
+"117
+[v ADCC_StartConversion@channel channel `E10834  1 a 1 0 ]
+"124
+} 0
+"126
+[v _ADCC_IsConversionDone ADCC_IsConversionDone `(a  1 e 1 0 ]
+{
+"130
+} 0
+"132
+[v _ADCC_GetConversionResult ADCC_GetConversionResult `(us  1 e 2 0 ]
+{
+"136
 } 0
 "121 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/tmr0.c
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
 {
-"131
+"130
 } 0
-"138
+"132
+[v _TMR0_CallBack TMR0_CallBack `(v  1 e 1 0 ]
+{
+"140
+} 0
+"146
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"141
+"152
+} 0
+"111 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/cwg1.c
+[v i1_CWG1_AutoShutdownEventSet CWG1_AutoShutdownEventSet `(v  1 e 1 0 ]
+{
+"114
+} 0
+"93 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/tmr0.c
+[v _TMR0_StopTimer TMR0_StopTimer `(v  1 e 1 0 ]
+{
+"97
 } 0
 "135 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
@@ -402,15 +807,20 @@
 "147
 [v _IOCCF2_ISR IOCCF2_ISR `(v  1 e 1 0 ]
 {
-"158
+"159
 } 0
 "87 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/tmr0.c
 [v _TMR0_StartTimer TMR0_StartTimer `(v  1 e 1 0 ]
 {
 "91
 } 0
-"170 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/pin_manager.c
+"171 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/pin_manager.c
 [v _IOCCF2_DefaultInterruptHandler IOCCF2_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"173
+"174
+} 0
+"116 C:\Users\rapps\MPLABXProjects\AutotuneTest.X\mcc_generated_files/cwg1.c
+[v _CWG1_AutoShutdownEventClear CWG1_AutoShutdownEventClear `(v  1 e 1 0 ]
+{
+"119
 } 0
